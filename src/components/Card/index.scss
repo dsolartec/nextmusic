@@ -1,0 +1,19 @@
+.nextmusic-card {
+  margin-top: 1rem;
+
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+  & > .card-title {
+    font: {
+      size: 1.25rem;
+      weight: 600;
+    }
+    margin-left: 3px;
+    letter-spacing: .02em;
+    color: #140516;
+  }
+  & > .card-content {
+    margin-top: .5rem;
+  }
+}

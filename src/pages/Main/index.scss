@@ -1,0 +1,37 @@
+@import '../../assets/scss/variables.scss';
+
+.all-songs-content {
+  position: relative;
+  width: 100%;
+
+  & > .songs {
+    width: calc(100% - 20px);
+  }
+  & > .letters {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: .75rem;
+    list-style: none;
+
+    & > li {
+      text-align: center;
+      font: {
+        size: 13px;
+        weight: bold;
+      }
+      color: rgba(black, .3);
+      padding: .25rem 0;
+
+      &:nth-child(1) {
+        padding-top: 0;
+      }
+      &.active {
+        color: $mainColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "nextmusic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

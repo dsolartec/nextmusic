@@ -1,0 +1,47 @@
+.nextmusic-item-list {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: .5rem;
+
+  &:nth-of-type(1) {
+    margin-top: 0;
+  }
+  & > .item-thumbnail {
+    width: 45px;
+    height: 45px;
+    background: {
+      repeat: no-repeat;
+      position: center;
+      size: cover;
+    }
+    border-radius: 4px;
+  }
+  & > .item-info {
+    width: calc(100% - 24px - 45px);
+    padding-left: .5rem;
+
+    & > p {
+      margin: 0;
+      line-height: 1.2;
+      font-weight: bold;
+      color: #140516;
+    }
+    & > span {
+      font-size: 12px;
+      color: #9B979C;
+      display: block;
+    }
+  }
+  & > .item-more {
+    width: 24px;
+    height: 24px;
+    background: {
+      image: url('../../assets/images/icons/more_vertical.svg');
+      repeat: no-repeat;
+      position: center;
+      size: cover;
+    }
+  }
+}

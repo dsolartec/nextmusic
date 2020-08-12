@@ -1,0 +1,96 @@
+@import '../../assets/scss/variables.scss';
+
+.nextmusic-navigation {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: -100%;
+  width: calc(100% - 24px - 2.5rem);
+  height: 100vh;
+  box-shadow: 0px 0px 8px rgba(black, .2);
+  padding: 1rem;
+  transition: .4s left ease-in-out;
+  overflow: hidden;
+
+  &.active {
+    left: 0;
+  }
+  & > .navigation-bg {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(white, .6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  & > .navigation-top {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    & > .top-icon {
+      width: 38px;
+      height: 38px;
+      background: {
+        image: url('../../assets/images/icon.svg');
+        repeat: no-repeat;
+        position: center;
+        size: cover;
+      }
+    }
+    & > .top-text {
+      color: $mainColor;
+      font: {
+        size: 36px;
+        weight: bold;
+      }
+      padding-left: .5rem;
+    }
+  }
+  & > .navigation-items {
+    position: relative;
+    z-index: 2;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    & > li {
+      margin-top: 1.5rem;
+
+      & > a {
+        color: $textColor;
+        text-decoration: none;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: flex-start;
+
+        & > .item-icon {
+          width: 38px;
+          height: 38px;
+        }
+        & > span {
+          display: block;
+          padding-left: .5rem;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  & > .navigation-bottom {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 1rem;
+    color: rgba(black, .5);
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+  }
+}
